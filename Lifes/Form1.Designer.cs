@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.BStop = new System.Windows.Forms.Button();
+            this.BStart = new System.Windows.Forms.Button();
             this.NUpDwnDensity = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.NUpDwnResolution = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -57,8 +57,8 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.BStop);
+            this.splitContainer1.Panel1.Controls.Add(this.BStart);
             this.splitContainer1.Panel1.Controls.Add(this.NUpDwnDensity);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.NUpDwnResolution);
@@ -70,6 +70,28 @@
             this.splitContainer1.Size = new System.Drawing.Size(1925, 1057);
             this.splitContainer1.SplitterDistance = 282;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // BStop
+            // 
+            this.BStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BStop.Location = new System.Drawing.Point(32, 338);
+            this.BStop.Name = "BStop";
+            this.BStop.Size = new System.Drawing.Size(120, 35);
+            this.BStop.TabIndex = 5;
+            this.BStop.Text = "STOP";
+            this.BStop.UseVisualStyleBackColor = true;
+            this.BStop.Click += new System.EventHandler(this.BStop_Click);
+            // 
+            // BStart
+            // 
+            this.BStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BStart.Location = new System.Drawing.Point(32, 272);
+            this.BStart.Name = "BStart";
+            this.BStart.Size = new System.Drawing.Size(120, 35);
+            this.BStart.TabIndex = 4;
+            this.BStart.Text = "START";
+            this.BStart.UseVisualStyleBackColor = true;
+            this.BStart.Click += new System.EventHandler(this.BStart_Click);
             // 
             // NUpDwnDensity
             // 
@@ -94,7 +116,6 @@
             0,
             0,
             0});
-            this.NUpDwnDensity.ValueChanged += new System.EventHandler(this.NUpDwnDensiy);
             // 
             // label2
             // 
@@ -130,7 +151,6 @@
             0,
             0,
             0});
-            this.NUpDwnResolution.ValueChanged += new System.EventHandler(this.NUpDwnResolution);
             // 
             // label1
             // 
@@ -151,26 +171,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1639, 1057);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(32, 272);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "START";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(32, 338);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 35);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "STOP";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // timer1
             // 
@@ -205,8 +205,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.NumericUpDown NUpDwnDensity;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BStop;
+        private System.Windows.Forms.Button BStart;
         private System.Windows.Forms.Timer timer1;
     }
 }
